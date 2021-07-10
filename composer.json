@@ -1,0 +1,41 @@
+{
+    "name": "torian257x/rubixai",
+    "description": "Meant for AI using a wrapped Rubix ML library to make it very approachable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukas Meier",
+            "email": "torian257x@gmail.com",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/torian257x/rubixai",
+    "keywords": ["Laravel", "RubixAi"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Torian257x\\RubixAi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Torian257x\\RubixAi\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Torian257x\\RubixAi\\RubixAiServiceProvider"
+            ],
+            "aliases": {
+                "RubixAi": "Torian257x\\RubixAi\\Facades\\RubixAi"
+            }
+        }
+    }
+}
