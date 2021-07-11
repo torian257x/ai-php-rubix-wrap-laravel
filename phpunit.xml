@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php"
-         backupGlobals="false"
+<phpunit backupGlobals="false"
          backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
          colors="true"
-         verbose="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Package">
-            <directory suffix=".php">./tests/</directory>
+        <testsuite name="Unit Tests">
+            <directory suffix="Test.php">./tests/Unit</directory>
+<!--            <directory suffix="Test.php">./tests/Integration</directory>-->
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory>src/</directory>
+            <directory suffix=".php">src</directory>
+            <exclude>
+                <directory suffix=".php">src/Examples</directory>
+            </exclude>
         </whitelist>
     </filter>
+    <php>
+    </php>
 </phpunit>
