@@ -28,6 +28,10 @@ class LConfigTest extends TestCase
         self::assertNotEmpty($c['csv_path_output']);
 
         self::assertNull($c['shouldNotExist'] ?? null);
+
+        $mc = rubixai_getconfig('RubixMainClass');
+
+        self::assertEquals(RubixAiService::class, $mc);
     }
 
 
