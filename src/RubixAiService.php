@@ -12,12 +12,15 @@ class RubixAiService extends RubixService
 
     public static function getConfig(string $config_entry = null)
     {
+        if($config_entry){
+            return config('rubixai')[$config_entry];
+        }
         return config('rubixai');
     }
 
     public static function train(
         $data,
-        mixed $data_index_w_label,
+        mixed $data_index_w_label = null,
         Estimator $estimator_algorithm = null,
         array $transformers = null,
         $model_filename = 'model_trained.rbx',
@@ -37,7 +40,7 @@ class RubixAiService extends RubixService
 
     public static function trainWithoutTest(
         $data,
-        mixed $data_index_w_label,
+        mixed $data_index_w_label = null,
         Estimator $estimator_algorithm = null,
         array $transformers = null,
         $model_filename = 'model_trained.rbx'

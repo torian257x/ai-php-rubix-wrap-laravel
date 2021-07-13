@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Rubix\ML\Extractors\CSV;
 use Sushi\Sushi;
 
-class TestApartment extends Model
+class Apartment extends Model
 {
     use Sushi;
 
@@ -15,15 +15,15 @@ class TestApartment extends Model
         'price_millions' => 'float',
         'space' => 'int',
         'rooms' => 'int',
-        'zone_id' => 'int',
-        'zone_2_id' => 'int',
+        'zone_id' => 'string',
+        'zone_2_id' => 'string',
         'geo_lat' => 'float',
         'geo_lng' => 'float',
         'parking' => 'int',
-        'water_heating' => 'int',
-        'doorman' => 'int',
+        'water_heating' => 'string',
+        'doorman' => 'string',
         'price_level' => 'int',
-        'gas_network' => 'int',
+        'gas_network' => 'string',
         'balcony' => 'int',
         'linen_room' => 'int',
     ];

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Rubix\ML\Extractors\CSV;
 use Sushi\Sushi;
 
-class TestIrisFlower extends Model
+class IrisFlower extends Model
 {
     use Sushi;
 

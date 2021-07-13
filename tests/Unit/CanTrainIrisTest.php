@@ -9,9 +9,10 @@ use Orchestra\Testbench\TestCase;
 use Torian257x\RubixAi\Facades\RubixAi;
 use Torian257x\RubixAi\RubixAiService;
 use Torian257x\RubixAi\RubixAiServiceProvider;
-use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\TestIrisFlower;
+use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\Apartment;
+use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\IrisFlower;
 
-class CanTrainTest extends TestCase
+class CanTrainIrisTest extends TestCase
 {
 
     protected function getPackageProviders($app)
@@ -19,15 +20,13 @@ class CanTrainTest extends TestCase
         return [RubixAiServiceProvider::class];
     }
 
-    public function testCanTrain()
+    public function testCanTrainIris()
     {
-        $flowers = TestIrisFlower::all();
+        $flowers = IrisFlower::all();
 
         $report = RubixAi::train($flowers, 'iris_plant_type');
 
         self::assertGreaterThan(0.9, $report['fbeta']);
     }
-
-
 
 }

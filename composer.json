@@ -12,8 +12,8 @@
     "keywords": ["Laravel", "RubixAi"],
     "require": {
         "illuminate/support": "~7|~8",
-        "torian257x/ai-php-rubix-wrap": "^0.9.0",
-        "calebporzio/sushi": "^2.2"
+        "calebporzio/sushi": "^2.2",
+        "torian257x/ai-php-rubix-wrap": "@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "~9.0",
@@ -36,6 +36,15 @@
             ],
             "aliases": {
                 "RubixAi": "Torian257x\\RubixAi\\Facades\\RubixAi"
+            }
+        }
+    },
+    "repositories": {
+        "torian257x/ai-php-rubix-wrap": {
+            "type": "path",
+            "url": "/home/jossnaz/IdeaProjects/rubix-wrap",
+            "options": {
+                "symlink": true
             }
         }
     }
