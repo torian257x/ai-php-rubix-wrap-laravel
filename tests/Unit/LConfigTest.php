@@ -7,6 +7,7 @@ namespace Torian257x\RubixAi\Tests\Unit;
 use Orchestra\Testbench\TestCase;
 use Torian257x\RubixAi\RubixAiService;
 use Torian257x\RubixAi\RubixAiServiceProvider;
+use Torian257x\RubWrap\Service\RubixService;
 
 class LConfigTest extends TestCase
 {
@@ -31,7 +32,9 @@ class LConfigTest extends TestCase
 
         $mc = rubixai_getconfig('RubixMainClass');
 
-        self::assertEquals(RubixAiService::class, $mc);
+        $anomalies =  array_column($mc, 'anomaly');
+        self::assertGreaterThan(5,gv array_sum($anomalies));
+        self::assertEquals(RubixService::class, $mc);
     }
 
 
