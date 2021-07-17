@@ -33,7 +33,7 @@ class LConfigTest extends TestCase
         $mc = rubixai_getconfig('RubixMainClass');
 
         $anomalies =  array_column($mc, 'anomaly');
-        self::assertGreaterThan(5,gv array_sum($anomalies));
+        self::assertGreaterThan(5, array_sum($anomalies));
         self::assertEquals(RubixService::class, $mc);
     }
 
