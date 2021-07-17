@@ -1,5 +1,5 @@
 {
-    "name": "torian257x/rubixai",
+    "name": "torian257x/ai-php-rubix-wrap-laravel",
     "description": "Meant for AI using a wrapped Rubix ML library to make it very approachable",
     "license": "MIT",
     "authors": [
