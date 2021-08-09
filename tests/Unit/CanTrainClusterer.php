@@ -109,6 +109,7 @@ class CanTrainClusterer extends TestCase
         $clusters = array_column($data_w_cluster_nr,'cluster_nr');
         $sum_clusters = array_sum($clusters);
 
+
         self::assertGreaterThan(100, $sum_clusters);
 
 
