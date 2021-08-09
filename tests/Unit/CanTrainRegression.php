@@ -12,7 +12,7 @@ use Torian257x\RubixAi\RubixAiServiceProvider;
 use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\Apartment;
 use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\IrisFlower;
 
-class CanTrainIrisTest extends TestCase
+class CanTrainRegression extends TestCase
 {
 
     protected function getPackageProviders($app)
@@ -20,13 +20,15 @@ class CanTrainIrisTest extends TestCase
         return [RubixAiServiceProvider::class];
     }
 
-    public function testCanTrainIris()
-    {
-        $flowers = IrisFlower::all();
 
-        $report = RubixAi::train($flowers, 'iris_plant_type');
+    public function testCanTrainApartments(){
 
-        self::assertGreaterThan(0.9, $report['fbeta']);
+        $apartments = Apartment::where('space', '<', 200)->get();
+
+        $report = RubixAi::train($apartments, 'price_millions', train_part_size: 0.95);
+
+        self::assertLessThan(0.4, $report['mean absolute error']);
     }
+
 
 }

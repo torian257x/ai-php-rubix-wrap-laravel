@@ -22,7 +22,7 @@ use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\Apartment;
 use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\IrisFlower;
 use Torian257x\RubWrap\Service\RubixService;
 
-class CanTrainSimilarApartmentsTest extends TestCase
+class CanTrainClusterer extends TestCase
 {
 
     protected function getPackageProviders($app)
@@ -97,6 +97,8 @@ class CanTrainSimilarApartmentsTest extends TestCase
                 new ZScaleStandardizer(),
             ]
         );
+
+        var_dump($data_w_cluster_nr );
 
     }
 

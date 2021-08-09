@@ -12,7 +12,7 @@ use Torian257x\RubixAi\RubixAiServiceProvider;
 use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\Apartment;
 use Torian257x\RubixAi\Tests\Unit\TestEloquentModels\IrisFlower;
 
-class CanTrainReadmeApartmentsTest extends TestCase
+class CanTrainRegressionSimple extends TestCase
 {
 
     protected function getPackageProviders($app)
