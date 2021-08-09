@@ -34,7 +34,7 @@ class CanTrainClusterer extends TestCase
     public static function getData()
     {
 
-        $data = Apartment::limit(10)->get();
+        $data = Apartment::limit(1000)->get();
         $data = $data->map(
             function (Apartment $a) {
 
@@ -66,13 +66,21 @@ class CanTrainClusterer extends TestCase
 
                 $a->doorman = $dm_val;
 
-                $a->rr = $a->rooms ^ 2;
-                $a->pp = $a->price_millions ^ 2;
+                $a->rr = pow($a->rooms, 2);
+                $a->pp = pow($a->price_millions, 2);
+                $a->pp3 = pow($a->price_millions, 3);
                 $a->p_t_r = $a->price_millions * $a->rooms ;
                 $a->p_t_lat = $a->price_millions * $a->geo_lat;
                 $a->p_t_lng = $a->price_millions * $a->geo_lng;
+                $a->latlng1 = $a->geo_lat * $a->geo_lng;
+                $a->latlng2 = pow($a->geo_lat * $a->geo_lng, 2);
 
-                return $a;
+                $rv = $a->toArray();
+
+                unset($rv['zone_id']);
+                unset($rv['zone_2_id']);
+
+                return $rv;
             }
         );
 
@@ -98,7 +106,11 @@ class CanTrainClusterer extends TestCase
             ]
         );
 
-        var_dump($data_w_cluster_nr );
+        $clusters = array_column($data_w_cluster_nr,'cluster_nr');
+        $sum_clusters = array_sum($clusters);
+
+        self::assertGreaterThan(100, $sum_clusters);
+
 
     }
 
