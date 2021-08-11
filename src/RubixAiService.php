@@ -67,7 +67,6 @@ class RubixAiService extends RubixService
         array $ignored_attributes = self::DEFAULT_IGNORED_ATTRS
     ): array|int {
         $input_data = static::mixedToArray($input_data, $ignored_attributes);
-        var_dump($input_data);
         return parent::predict($input_data, $estimator, $model_filename);
     }
 
