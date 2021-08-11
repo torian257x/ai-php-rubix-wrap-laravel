@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Facade;
  * @method static array|int predict($input_data, \Rubix\ML\Estimator $estimator = null, string $model_filename = 'model_trained.rbx')
  * @method static array getErrorAnalysis($samples_w_labels, $key_for_labels, $model_filename = 'model_trained.rbx')
  * @method static array getConfig(string $config_entry = null)
+ * @method static array toCsv(array $data, string $filename)
+ * @method static array fromCsv(string $filename, ?array $columns = null)
  *
  * @see \Torian257x\RubixAi\RubixAiService
  */
