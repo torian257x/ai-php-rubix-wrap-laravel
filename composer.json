@@ -22,10 +22,7 @@
     "autoload": {
         "psr-4": {
             "Torian257x\\RubixAi\\": "src/"
-        },
-        "files": [
-            "src/functions.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

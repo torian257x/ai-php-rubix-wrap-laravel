@@ -31,6 +31,10 @@ class RubixAiServiceProvider extends ServiceProvider
         $this->app->singleton('rubixai', function ($app) {
             return new RubixAiService;
         });
+
+        if(!defined('RUBIXAI_CUSTOM_CONFIG')){
+            define('RUBIXAI_CUSTOM_CONFIG', config('rubixai'));
+        }
     }
 
     /**
