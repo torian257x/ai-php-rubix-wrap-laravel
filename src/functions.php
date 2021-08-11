@@ -1,12 +1,5 @@
 <?php
 
-if(!function_exists('rubixai_getconfig')) {
-    //this overwrite the global function from the package
-    function rubixai_getconfig(string $config_entry = null)
-    {
-        if ($config_entry) {
-            return config('rubixai')[$config_entry];
-        }
-        return config('rubixai');
-    }
+if(!defined('RUBIXAI_CUSTOM_CONFIG')){
+    define('RUBIXAI_CUSTOM_CONFIG', config('rubixai'));
 }
