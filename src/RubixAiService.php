@@ -85,7 +85,6 @@ class RubixAiService extends RubixService
 
 
     private static function mixedToArray($data, array $ignore_attrs = null){
-        $rv = [];
         if(is_array($data)){
             $rv = $data;
         }else if($data instanceof Collection){
