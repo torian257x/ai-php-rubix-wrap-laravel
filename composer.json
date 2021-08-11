@@ -22,15 +22,15 @@
     "autoload": {
         "psr-4": {
             "Torian257x\\RubixAi\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Torian257x\\RubixAi\\Tests\\": "tests"
         },
         "files": [
             "src/functions.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Torian257x\\RubixAi\\Tests\\": "tests"
+        }
     },
     "extra": {
         "laravel": {
