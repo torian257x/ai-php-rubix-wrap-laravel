@@ -27,14 +27,13 @@ class RubixAiServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/rubixai_config.php', 'rubixai');
+        if(!defined('RUBIXAI_CUSTOM_CONFIG')){
+            define('RUBIXAI_CUSTOM_CONFIG', config('rubixai'));
+        }
 
         $this->app->singleton('rubixai', function ($app) {
             return new RubixAiService;
         });
-
-        if(!defined('RUBIXAI_CUSTOM_CONFIG')){
-            define('RUBIXAI_CUSTOM_CONFIG', config('rubixai'));
-        }
     }
 
     /**
