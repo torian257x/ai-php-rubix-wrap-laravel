@@ -45,5 +45,6 @@ Just be sure to pass it as argument to `RubixAi::train(..., estimator_algorithm:
 
 Same for transformers.
 
+You can customize the model file name as well as what attributes / columns to ignore.
 
 
