@@ -15,7 +15,7 @@ that's it.
 
 This creates a file in your laravel storage/ai_rubix/ folder that contains the model.
 
-This model then can be used to predict:
+This model then will be used to predict:
 
 ```
 $isDogOrCat = RubixAi::predict($needs_prediction);
