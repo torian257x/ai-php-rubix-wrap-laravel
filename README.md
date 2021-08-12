@@ -1,4 +1,4 @@
-# torian257x/ai-php-rubix-wrap-larave
+# torian257x/ai-php-rubix-wrap-laravel
 This is about Artificial Intelligence, Machine Learning and Pattern Recognition.
 
 This library is using a [PHP standalone AI wrapper](https://github.com/torian257x/ai-php-rubix-wrap) of [Rubix ML](https://github.com/RubixML/ML)
