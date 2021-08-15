@@ -29,6 +29,8 @@ echo $isDogOrCat; //prints ['dog']
 composer require torian257x/ai-php-rubix-wrap-laravel
 ```
 
+If there are any issues, please have a look at https://docs.rubixml.com/latest/installation.html in case you are trying to do something special that requires say, tensor.
+
 ## Default Estimator
 `new KDNeighborsRegressor()` for regression (say estimation of price)
       
