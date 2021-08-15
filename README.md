@@ -23,6 +23,12 @@ $isDogOrCat = RubixAi::predict($needs_prediction);
 echo $isDogOrCat; //prints ['dog']
 ```
 
+## Installation
+
+```
+composer require torian257x/ai-php-rubix-wrap-laravel
+```
+
 ## Default Estimator
 `new KDNeighborsRegressor()` for regression (say estimation of price)
       
