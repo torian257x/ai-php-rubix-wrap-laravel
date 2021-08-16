@@ -1,7 +1,10 @@
 # torian257x/ai-php-rubix-wrap-laravel
-This is about Artificial Intelligence, Machine Learning and Pattern Recognition.
+This package is about Artificial Intelligence, Machine Learning and Pattern Recognition in Laravel.
 
-This library is using a [PHP standalone AI wrapper](https://github.com/torian257x/ai-php-rubix-wrap) of [Rubix ML](https://github.com/RubixML/ML)
+The video tutorial with examples on how to use the library can be found here: 
+
+Video tutorial of the [how to use AI in Laravel](https://youtu.be/0i2npIenj70) ([full playlist](https://www.youtube.com/watch?v=0i2npIenj70&list=PLInLuJxdnhE-qZJHhhQka0osgYz8_Kn6i))
+
 
 Do AI with 2 lines of code:
 
@@ -56,3 +59,6 @@ Same for transformers.
 You can customize the model file name as well as what attributes / columns to ignore.
 
 
+
+## References
+This library is using a [PHP standalone AI wrapper](https://github.com/torian257x/ai-php-rubix-wrap) of [Rubix ML](https://github.com/RubixML/ML)
