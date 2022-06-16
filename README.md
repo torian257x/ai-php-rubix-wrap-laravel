@@ -2,10 +2,14 @@
 This package is about Artificial Intelligence, Machine Learning and Pattern Recognition in Laravel.
 
 The video tutorial with examples on how to use the library can be found here: 
+<br/><br/><br/>
+## Video tutorial 
+[how to use AI in Laravel](https://youtu.be/0i2npIenj70) ([full playlist](https://www.youtube.com/watch?v=0i2npIenj70&list=PLInLuJxdnhE-qZJHhhQka0osgYz8_Kn6i))
 
-Video tutorial of the [how to use AI in Laravel](https://youtu.be/0i2npIenj70) ([full playlist](https://www.youtube.com/watch?v=0i2npIenj70&list=PLInLuJxdnhE-qZJHhhQka0osgYz8_Kn6i))
+  
+<br/><br/>
 
-
+## Example code
 Do AI with 2 lines of code:
 
 ```
